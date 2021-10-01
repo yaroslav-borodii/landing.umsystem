@@ -1,0 +1,535 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  line-height: normal;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Roboto";
+  font-weight: normal;
+  cursor: default;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 500;
+  color: #000;
+  line-height: normal;
+}
+
+p {
+  font-weight: 400;
+}
+
+a, a:hover, a:visited {
+  text-decoration: none;
+  color: #23213D;
+}
+
+.navbar__logo .logo__link span:first-of-type {
+  font-size: 62px;
+}
+
+.navbar__logo .logo__link span:last-of-type {
+  font-size: 30px;
+}
+
+.navbar__logo .logo__link span:last-of-type:before {
+  content: "";
+  width: 1px;
+  height: 45px;
+  background-color: #000;
+  margin-right: 10px;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #23213D;
+  font-weight: 500;
+  padding: 0 25px;
+  font-size: 20px;
+  transition: margin 0.2s ease-in-out;
+  position: relative;
+}
+
+.navbar .navbar-nav .active.nav-link,
+.navbar .navbar-nav .nav-link:hover {
+  margin-top: -5px;
+}
+
+.navbar .navbar-nav .nav-link::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  bottom: -8px;
+  background-color: #23213D;
+  left: 25px;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar .navbar-nav .nav-link:hover::after,
+.navbar .navbar-nav .active.nav-link::after {
+  width: calc(100% - 50px);
+}
+
+a.btn,
+button.btn {
+  font-weight: 500;
+  padding: 17px 45px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  background-color: #484BF2;
+  color: #F6F9FD;
+  line-height: normal;
+}
+
+.btn:hover {
+  color: #F6F9FD;
+}
+
+.navbar .navbar-nav .nav-link.btn--log-in {
+  color: #F6F9FD;
+  padding: 8px 25px;
+  filter: drop-shadow(0px 0px 40px rgba(45, 66, 94, 0.4));
+}
+
+.navbar .navbar-nav .nav-link.btn--log-in::after {
+  content: none;
+}
+
+.section__priorities .priorities__items {
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 70px;
+  grid-column-gap: 50px;
+  padding: 0;
+  list-style: none;
+}
+
+.section__tasks .card {
+  padding: 25px;
+  border-radius: 100%;
+  width: 196px;
+  height: 196px;
+}
+
+.section__tasks .card-body {
+  flex: 0 0 auto;
+  padding-bottom: 0;
+}
+
+.section__tasks .card-img-top {
+  width: 66px;
+}
+
+.section__order {
+  background-color: #EAECEF;
+}
+
+section, footer {
+  padding: 50px 0;
+}
+
+.page-title {
+  color: #484BF2;
+  line-height: 58px;
+  font-size: 48px;
+}
+
+.page-description {
+  font-size: 24px;
+  line-height: 36px;
+  margin: 40px 0;
+  opacity: 0.8;
+}
+
+.btn--order {
+  box-shadow: #000 0px 0px 18px -6px;
+  padding: 19px 67px;
+}
+
+.section__title {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #484BF2;
+}
+
+.priorities__item {
+  font-weight: 500;
+  font-size: 20px;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.priorities__item p {
+  line-height: 30px;
+}
+
+.priorities__item::before {
+  content: "";
+  background-image: url('../img/mark.svg');
+  background-repeat: no-repeat;
+  background-size: 20px 15px;
+  background-position: center;
+  background-color: #F4F9FF;
+  -webkit-box-shadow: 0px 0px 10px rgba(89, 145, 211, 0.2);
+  -moz-box-shadow: 0px 0px 10px rgba(89, 145, 211, 0.2);
+  box-shadow: 0px 0px 10px rgba(89, 145, 211, 0.2);
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  margin-right: 40px;
+}
+
+footer .container p,
+footer .container a,
+footer .container span {
+  color: #6C7889;
+}
+
+footer .text-um-system span:first-of-type {
+  font-size: 80px;
+  line-height: 60px;
+}
+
+footer .text-um-system span:last-of-type {
+  font-size: 31px;
+}
+
+footer .vl {
+  width: 1px;
+  background-color: #6C7889;
+  margin-left: -30px;
+  margin-right: 6px;
+}
+
+footer .text-UMS,
+footer .text-copyright,
+.footer__nav {
+  font-size: 20px;
+}
+
+footer .text-um-system {
+  font-family: 'Manrope';
+}
+
+.footer__nav a {
+  transition: color 0.1s ease-in-out;
+}
+
+.section__tasks {
+  background-color: #484BF2;
+}
+
+.section__tasks .section__title,
+.section__team .section__title {
+  color: #fff;
+}
+
+.section__price {
+  background-image: url('../img/price-bg.svg');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+}
+
+.section__price .price__item {
+  border-radius: 35px;
+  padding: 45px 5px;
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.section__price .drop-shadow {
+  filter: drop-shadow(0px 0px 35.2568px rgba(189, 208, 251, 0.2));
+}
+
+.section__price .price__item:hover {
+  transform: scale(1.025);
+}
+.section__price .price__item.active {
+  transform: scale(1.05);
+}
+
+.section__price .price__img {
+  width: 76px;
+}
+
+.section__price .price__title,
+.section__price .price__number {
+  color: #484BF2;
+}
+
+.section__price .price__text,
+.section__price .price__scope {
+  color: #6C7889;
+}
+
+.section__price .price__scope {
+  margin: 30px 0;
+  font-size: 18px;
+}
+
+.section__price .price__scope li {
+  margin-top: 10px;
+}
+
+.section__price .price__title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.section__price .price__text {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.section__price .price__number {
+  font-weight: 700;
+}
+
+button.btn--choose-price {
+  padding: 15px 50px;
+  background-color: #fff;
+  box-shadow: inset 0 0 0 1px #484BF2;
+  color: #484BF2;
+}
+
+button.btn--choose-price:hover,
+.section__price .price__item.active button.btn--choose-price {
+  background-color: #484BF2;
+  color: #fff;
+}
+
+.section__team {
+  background-color: #484BF2;
+  background-image: url('../img/team/bg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.section__team .card {
+  border-radius: 40px;
+  filter: drop-shadow(0px 4px 10px rgba(26, 29, 157, 0.5));
+  border: unset;
+}
+
+.section__team .card .img-fluid {
+  border-radius: 38px;
+  width: 100%;
+  height: 100%;
+}
+
+.section__team .card .img-fluid-second {
+  right: 0;
+}
+
+.section__team .card .img-fluid-second-mobile {
+  left: 0;
+  padding: 0 .75rem;
+  bottom: -20px;
+}
+
+.section__team .card .card-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.section__team .card .card-subtitle {
+  opacity: 0.9;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.section__team .card .card-text {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.section__team .card .card-title,
+.section__team .card .card-subtitle {
+  color: #484BF2;
+}
+
+.section__team .card .card-body {
+  width: 100%;
+  padding: 0;
+  position: relative;
+  left: -25px;
+  z-index: 9999;
+}
+
+.section__contacts {
+  background-color: #EAECEF;
+}
+
+.section__contacts .container {
+  max-width: 700px;
+}
+
+.section__contacts label {
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 8px;
+  color: #23213D;
+  opacity: 0.8;
+}
+
+.section__contacts input,
+.section__contacts textarea,
+.section__contacts select {
+  padding: 19px 30px;
+  width: 100%;
+  border: 1px solid rgba(72, 75, 242, 0.2);
+  border-radius: 10px;
+  resize: none;
+  outline: none;
+  color: #4B4961;
+  font-size: 18px;
+  line-height: normal;
+}
+
+.section__contacts .form-select:invalid {
+  color: rgba(72, 75, 242, 0.2);
+}
+
+.section__contacts select {
+  -moz-appearance:none !important;
+  -webkit-appearance: none !important; 
+  appearance: none !important;
+}
+
+.section__contacts .form-select option {
+  color: #4B4961;
+}
+
+.phone-country-code {
+  margin-top: 19px;
+  left: 39px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.section__contacts input[name="phone"] {
+  padding: 18px 30px 18px 60px;
+}
+
+.form-select__blue-bg {
+  width: 60px;
+  height: 60px;
+  background-color: #484BF2;
+  border-radius: 10px;
+  right: .75rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+}
+
+.section__contacts .btn--submit {
+  border-radius: 10px;
+  padding: 16px 68px;
+  line-height: 28px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1399px) {
+  footer .vl {
+    margin-left: -18px;
+    margin-right: 0;
+  }
+
+  .section__tasks .container > .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 50px;
+    grid-column-gap: 60px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  footer .vl {
+    margin-left: -1px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .section__team .card .img-fluid-second {
+    right: calc(var(--bs-gutter-x) * .5);
+    border-top-right-radius: 38px;
+    border-bottom-right-radius: 38px;
+  }
+  .section__team .card .card-body {
+    padding: 1rem 2rem;
+    left: 0;
+  }
+
+  .section__tasks .container > .row {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 40px;
+    grid-column-gap: 0;
+  }
+
+  footer .text-um-system {
+    text-align: right;
+  }
+
+  .navbar .navbar-nav .nav-link::after {
+    content: none;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .section__priorities .priorities__items {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 30px;
+  }
+  .priorities__item::before {
+    margin-right: 25px;
+  }
+  .section__tasks .container > .row {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 40px;
+  }
+}
